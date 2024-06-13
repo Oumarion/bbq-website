@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "source sans pro", sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+}
+
+/* =================
+   Typography
+   ================= */
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #fff;
+
+  margin: 0;
+}
+
+h1 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1.3125rem;
+  text-transform: uppercase;
+
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h2 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.top-text {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+
+  order: -1;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to right, #ffa51d, #ff713b) 1;
+  margin: 0;
+  padding-top: 2px;
+}
+
+.fine-print {
+  font-size: 0.655rem;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+/* =================
+   Intro section
+   ================= */
+
+.intro {
+  background-image: url(../image/ribs.jpg),
+    linear-gradient(to right, #404040, #342929);
+  /* background-color: #404040; */
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 0.5em 2em;
+}
+
+/* =================
+   main-content section
+   ================= */
+
+.main-content {
+  padding: 2em 1em;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+/* =================
+   form
+   ================= */
+
+.email-collector {
+  width: 90%;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: 0.75em;
+  padding: 0.25em;
+  border: 1px solid #404040;
+  transform: scale(1);
+  transition: transform 250ms;
+}
+
+input:focus {
+  transform: scale(1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-image: linear-gradient(to right, #ffa51d, #ff713b);
+  color: #fff;
+  transform: scale(100%);
+  transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: scale(1.1);
+  /* color: #000; */
+}
+
+/* =================
+   media queries
+   ================= */
+
+@media (min-width: 500px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .intro,
+  .main-content {
+    width: 50vw;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-intro {
+    height: 100%;
+  }
+}
